@@ -17,6 +17,8 @@ const Projects = ({ categories, projects }) => {
               #0c0c0c
             );
             background-attachment: fixed;
+            background-position: bottom, center;
+            background-repeat: no-repeat;
             color: #f8f8ff;
           }
         `}</style>

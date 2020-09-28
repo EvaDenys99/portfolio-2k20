@@ -4,25 +4,6 @@
   }
 }
 
-.text-w-intro {
-  // @include media-breakpoint-down(sm) {
-  //   width: 18rem;
-  // }
-  // @include media-breakpoint-down(md) {
-  //   width: 30rem;
-  // }
-}
-// .text-w-grad {
-//   @include media-breakpoint-down(sm) {
-//     width: 19.3rem;
-//   }
-// }
-// .text-w-more {
-//   @include media-breakpoint-down(sm) {
-//     // width: 7rem;
-//   }
-// }
-
 .text-w-more-y {
   @include media-breakpoint-down(md) {
     display: none;
@@ -45,6 +26,10 @@
   color: #f8f8ff;
   width: 5%;
   text-align: center;
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
 }
 
 .text-w-more-y-input:focus {

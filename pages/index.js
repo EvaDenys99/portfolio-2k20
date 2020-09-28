@@ -177,6 +177,27 @@ export default function Home() {
         }),
       12000
     );
+    setTimeout(
+      () =>
+        scrollDivRef?.current?.scrollIntoView({
+          behavior: "smooth"
+        }),
+      12500
+    );
+    setTimeout(
+      () =>
+        scrollDivRef?.current?.scrollIntoView({
+          behavior: "smooth"
+        }),
+      13000
+    );
+    setTimeout(
+      () =>
+        scrollDivRef?.current?.scrollIntoView({
+          behavior: "smooth"
+        }),
+      13500
+    );
   };
   return (
     <Layout>
@@ -305,8 +326,10 @@ export default function Home() {
                 </div>
                 <div className="mt-4">
                   <h2>> hobbies</h2>
+                  <p>running</p>
                   <p>drawing</p>
                   <p>coding</p>
+                  <p>dogs&cats</p>
                   <p>going out with friends</p>
                   <p>listening to music</p>
                   <p>watching series</p>
