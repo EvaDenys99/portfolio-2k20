@@ -1,0 +1,72 @@
+.text-w-title {
+  @include media-breakpoint-down(sm) {
+    width: 18rem;
+  }
+}
+
+.text-w-intro {
+  // @include media-breakpoint-down(sm) {
+  //   width: 18rem;
+  // }
+  // @include media-breakpoint-down(md) {
+  //   width: 30rem;
+  // }
+}
+// .text-w-grad {
+//   @include media-breakpoint-down(sm) {
+//     width: 19.3rem;
+//   }
+// }
+// .text-w-more {
+//   @include media-breakpoint-down(sm) {
+//     // width: 7rem;
+//   }
+// }
+
+.text-w-more-y {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.text-w-more-button {
+  display: inline;
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}
+
+.text-w-more-y-input {
+  border-top: hidden;
+  border-right: hidden;
+  border-left: hidden;
+  background-color: transparent;
+  color: #f8f8ff;
+  width: 5%;
+  text-align: center;
+}
+
+.text-w-more-y-input:focus {
+  outline: none;
+}
+
+.img-me {
+  @include media-breakpoint-down(sm) {
+    display: none !important;
+  }
+  @include media-breakpoint-up(md) {
+    display: block;
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    bottom: 0;
+    left: 45%;
+  }
+}
+
+.information-text {
+  padding-bottom: 2rem;
+  height: 70vh;
+  overflow-y: auto;
+}

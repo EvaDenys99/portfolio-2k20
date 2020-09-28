@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Open Sans ExtraBold";
+  src: url("../assets/fonts/open/OpenSans-ExtraBold.woff2") format("woff2"),
+    url("../assets/fonts/open/OpenSans-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans Regular";
+  src: url("../assets/fonts/open/OpenSans-Regular.woff2") format("woff2"),
+    url("../assets/fonts/open/OpenSans-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Open Sans Light";
+  src: url("../assets/fonts/open/OpenSans-Light.woff2") format("woff2"),
+    url("../assets/fonts/open/OpenSans-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Mono SemiBold";
+  src: url("../assets/fonts/mono/SFMonoSemibold.woff2") format("woff2"),
+    url("../assets/fonts/mono/SFMonoSemibold.woff") format("woff");
+}
+@font-face {
+  font-family: "Mono Regular";
+  src: url("../assets/fonts/mono/SFMonoRegular.woff2") format("woff2"),
+    url("../assets/fonts/mono/SFMonoRegular.woff") format("woff");
+}
+@font-face {
+  font-family: "Mono Bold";
+  src: url("../assets/fonts/mono/SFMonoBold.woff2") format("woff2"),
+    url("../assets/fonts/mono/SFMonoBold.woff") format("woff");
+}
+
+h1 {
+  font-family: "Mono Bold";
+  @include media-breakpoint-down(lg) {
+    font-size: 1.5rem;
+  }
+}
+h2 {
+  font-family: "Mono Regular";
+  @include media-breakpoint-down(lg) {
+    font-size: 1rem;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 1.2rem;
+  }
+}
+
+h3 {
+  font-family: "Mono Bold";
+  @include media-breakpoint-down(lg) {
+    font-size: 1rem;
+  }
+}
+
+p {
+  font-family: "Open Sans Light";
+  @include media-breakpoint-down(lg) {
+    font-size: 1rem;
+  }
+  margin-bottom: 0rem !important;
+}
+
+.dottedUnderline {
+  border-bottom: 0.1rem dashed;
+}
+
+.thick {
+  font-family: "Mono Bold";
+}
+
+.navbar-brand-text,
+.nav-link {
+  font-family: "Mono Regular";
+}

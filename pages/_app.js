@@ -1,26 +1,30 @@
 import React from "react";
-import "../styles/globals.css";
+import "../styles/main.scss";
 import { ApolloProvider } from "@apollo/react-hooks";
 import withData from "../utils/apollo";
 import Head from "next/head";
 import Nav from "../components/nav";
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps, apollo }) {
+  const router = useRouter();
+
   return (
     <ApolloProvider client={apollo}>
       <Head>
         <title>Eva Denys</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
         <link
           rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-          crossorigin="anonymous"
-        ></link>
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
       </Head>
-      <Nav />
-      <div className="container">
+      <div className={router.pathname === "/blog" ? "newBgColor" : ""}>
+        <Nav />
+        {/* <div className="container animate__animated animate__fadeIn"> */}
         <Component {...pageProps} />
+        {/* </div> */}
       </div>
     </ApolloProvider>
   );

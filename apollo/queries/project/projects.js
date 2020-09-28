@@ -9,6 +9,10 @@ const PROJECTS_QUERY = gql`
       headImage {
         url
       }
+      categories {
+        id
+        name
+      }
     }
   }
 `;

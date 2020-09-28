@@ -1,0 +1,43 @@
+.badge-outlined {
+  border: 1px solid #eaeaf1;
+  background-color: transparent;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 1rem;
+  }
+}
+.badge-outlined-active {
+  border: 1px solid #6decb9;
+  color: #6decb9;
+  background-color: transparent;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 1rem;
+  }
+}
+
+.filters {
+  @include media-breakpoint-down(sm) {
+    overflow: scroll;
+    display: flex;
+    flex-direction: row;
+    margin-left: -1rem;
+  }
+
+  @include media-breakpoint-up(mg) {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include media-breakpoint-up(lg) {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.swipe-icon {
+  @include media-breakpoint-up(sm) {
+    display: none !important;
+  }
+  display: inline;
+}

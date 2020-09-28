@@ -1,0 +1,43 @@
+@import "./variables";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/react-typist/dist/Typist.css";
+@import "nav";
+@import "typography";
+@import "index";
+@import "articles";
+@import "filters";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Mono Regular";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #05f0b5;
+  text-decoration: underline;
+}
+
+* {
+  box-sizing: border-box;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.highlights {
+  color: #05f0b5;
+}
+
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+}

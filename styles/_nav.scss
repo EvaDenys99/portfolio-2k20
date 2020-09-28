@@ -1,0 +1,73 @@
+.nav-item-big {
+  padding-right: 2rem;
+  @include media-breakpoint-up(md) {
+    display: inline;
+  }
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.nav-item-big:hover {
+  content: ">_";
+  color: #05f0b5;
+  text-decoration: underline;
+}
+
+.nav-item-responsive {
+  display: none;
+  @include media-breakpoint-down(sm) {
+    display: inline;
+  }
+}
+
+.navbar-brand-text {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.navbar-brand-logo {
+  margin-bottom: -0.1rem;
+}
+
+.nav-item-active {
+  color: #05f0b5;
+}
+
+.overlay-menu {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-image: url("/images/bg-menu-sm.png"),
+    radial-gradient(circle at bottom right, #2c2c2c, #0c0c0c);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center, center;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-items {
+  position: relative;
+  top: 35%;
+  left: 40%;
+  width: 100%;
+  text-align: left;
+  & .overlay-item {
+    margin-top: 3rem;
+  }
+}
+
+.navbar {
+  backdrop-filter: blur(20px);
+  padding-left: 3rem;
+  padding-right: 1rem;
+  @include media-breakpoint-down(sm) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
