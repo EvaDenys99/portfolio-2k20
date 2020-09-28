@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import Query from "../components/query";
+import Query from "./components/query";
 import PROJECT_QUERY from "../apollo/queries/project/project";
 import ReactMarkdown from "react-markdown";
 

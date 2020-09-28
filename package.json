@@ -28,11 +28,6 @@
     "react-html-parser": "^2.0.2",
     "react-markdown": "^4.3.1",
     "react-router-dom": "^5.2.0",
-    "react-scroll": "^1.8.1",
-    "react-scroll-hooks": "^0.1.1",
-    "react-scroll-to-bottom": "^4.0.0",
-    "react-scrollchor": "^6.0.0",
-    "react-typewriter": "^0.4.1",
     "react-typist": "^2.0.5",
     "sass": "^1.26.11"
   }

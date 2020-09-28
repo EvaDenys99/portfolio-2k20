@@ -3,7 +3,7 @@ import "../styles/main.scss";
 import { ApolloProvider } from "@apollo/react-hooks";
 import withData from "../utils/apollo";
 import Head from "next/head";
-import Nav from "../components/nav";
+import Nav from "./components/nav";
 import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps, apollo }) {
