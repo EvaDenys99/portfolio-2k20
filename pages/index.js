@@ -1,5 +1,6 @@
 import Typist from "react-typist";
 import React, { useState, useRef } from "react";
+import Layout from "../components/layout";
 
 export default function Home() {
   const [moreInfo, setMoreInfo] = useState(false);
@@ -178,196 +179,172 @@ export default function Home() {
     );
   };
   return (
-    <div className="mt-5 container animate__animated animate__fadeIn">
-      <style jsx global>{`
-        @media only screen and (min-width: 0px) {
-          body {
-            background-color: #151515;
-            background-image: url("/images/me-sm.svg"),
-              radial-gradient(circle at bottom right, #2c2c2c, #0c0c0c);
-            background-attachment: fixed;
-            background-position: bottom, center;
-            background-repeat: no-repeat;
+    <Layout>
+      <div className="mt-5 container animate__animated animate__fadeIn">
+        <style jsx global>{`
+          @media only screen and (min-width: 0px) {
+            body {
+              background-color: #151515;
+              background-image: url("/images/me-sm.svg"),
+                radial-gradient(circle at bottom right, #2c2c2c, #0c0c0c);
+              background-attachment: fixed;
+              background-position: bottom, center;
+              background-repeat: no-repeat;
 
-            color: #f8f8ff;
+              color: #f8f8ff;
+            }
           }
-        }
-        @media only screen and (min-width: 720px) {
-          body {
-            background-color: #151515;
-            background-image: radial-gradient(
-              circle at bottom right,
-              #2c2c2c,
-              #0c0c0c
-            );
-            background-attachment: fixed;
+          @media only screen and (min-width: 720px) {
+            body {
+              background-color: #151515;
+              background-image: radial-gradient(
+                circle at bottom right,
+                #2c2c2c,
+                #0c0c0c
+              );
+              background-attachment: fixed;
 
-            background-repeat: no-repeat;
+              background-repeat: no-repeat;
 
-            color: #f8f8ff;
+              color: #f8f8ff;
+            }
+
+            body {
+              overflow: hidden;
+            }
           }
+        `}</style>
 
-          body {
-            overflow: hidden;
-          }
-        }
-      `}</style>
-
-      <h1 className="text-w-title">
-        Hello, I am a{" "}
-        <span className="highlights bold">Creative Developer</span>.
-      </h1>
-      <img
-        className="img-me img-fluid"
-        src="/images/me.svg"
-        alt="/images/me.svg"
-      />
-      <div className="mt-5 information-text">
-        <div>
-          <Typist
-            cursor={{
-              show: false
-            }}
-          >
-            <Typist.Delay ms={1250} />
-            <div>
-              <h2> > introduction </h2>
-              <Typist.Delay ms={500} />
-              <p className="text-w-intro">
-                Hello, my name is Eva Denys. And I am a{" "}
-                <span className="highlights thick">Creative Developer</span>,{" "}
-                <em className="highlights">UI & UX Designer</em> &{" "}
-                <span className="highlights dottedUnderline">Researcher</span>.
-              </p>
-            </div>
-
-            <div className="mt-4">
-              <h2>> graduate</h2>
-              <Typist.Delay ms={500} />
-              <div className="text-w-grad">
-                <p className="highlights mb-2">
-                  BA Digital Design & Development
-                </p>
-                <p>@ Howest University of Applied Sciences</p>
-              </div>
-            </div>
-            <div className="mt-4">
-              <h2>> contact</h2>
-              <Typist.Delay ms={500} />
-              <a href="mailto: evadenys@hotmail.com">evadenys@hotmail.com</a>
-              <p>
-                <a href="" download className="">
-                  <u>my resume</u>
-                </a>
-              </p>
-            </div>
-            <div className="mt-4">
-              <h2 className="text-w-more">
-                > would you like to know more?{" "}
-                <em className="text-w-more-y">
-                  (type <span className="highlights">y</span>)
-                </em>
-              </h2>
-              <input
-                type="text"
-                autoFocus
-                className="text-w-more-y-input"
-                onChange={e =>
-                  e.currentTarget.value.toLocaleLowerCase() === "y" &&
-                  showMoreInfo()
-                }
-              ></input>
-              <p className="text-w-more-button">
-                Click on{" "}
-                <em
-                  onClick={() => {
-                    showMoreInfo();
-                  }}
-                  className="highlights"
-                >
-                  <u>Yes</u>
-                </em>
-              </p>
-            </div>
-          </Typist>
-          {moreInfo && (
+        <h1 className="text-w-title">
+          Hello, I am a{" "}
+          <span className="highlights bold">Creative Developer</span>.
+        </h1>
+        <img
+          className="img-me img-fluid"
+          src="/images/me.svg"
+          alt="/images/me.svg"
+        />
+        <div className="mt-5 information-text">
+          <div>
             <Typist
               cursor={{
                 show: false
               }}
             >
-              <div className="mt-4">
-                <h2>> age & origin</h2>
-                <p>21 y/o</p>
-                <p>Belgium, Deinze 9850</p>
+              <Typist.Delay ms={1250} />
+              <div>
+                <h2> > introduction </h2>
+                <Typist.Delay ms={500} />
+                <p className="text-w-intro">
+                  Hello, my name is Eva Denys. And I am a{" "}
+                  <span className="highlights thick">Creative Developer</span>,{" "}
+                  <em className="highlights">UI & UX Designer</em> &{" "}
+                  <span className="highlights dottedUnderline">Researcher</span>
+                  .
+                </p>
               </div>
               <div className="mt-4">
-                <h2>> hobbies</h2>
-                <p>drawing</p>
-                <p>coding</p>
-                <p>going out with friends</p>
-                <p>listening to music</p>
-                <p>watching series</p>
-                <p>...</p>
-              </div>
-              <div className="mt-4 mb-4">
-                <h2>> professional social medias</h2>
-                <div className="d-flex flex-column">
-                  <p className="pb-3 pt-3">
-                    <a href="https://github.com/EvaDenys99" target="blank">
-                      Github
-                    </a>
+                <h2>> graduate</h2>
+                <Typist.Delay ms={500} />
+                <div className="text-w-grad">
+                  <p className="highlights mb-2">
+                    BA Digital Design & Development
                   </p>
-                  <p className="pb-3">
-                    <a
-                      href="https://www.linkedin.com/in/eva-denys-152119183/"
-                      target="blank"
-                      className="pb-3"
-                    >
-                      Linkedin
-                    </a>
-                  </p>
-                  <p className="pb-3" id="lastitem">
-                    <a
-                      href="https://www.behance.net/_eva_denys_"
-                      target="blank"
-                    >
-                      Behance
-                    </a>
-                  </p>
+                  <p>@ Howest University of Applied Sciences</p>
                 </div>
               </div>
+              <div className="mt-4">
+                <h2>> contact</h2>
+                <Typist.Delay ms={500} />
+                <a href="mailto: evadenys@hotmail.com">evadenys@hotmail.com</a>
+                <p>
+                  <a href="" download className="">
+                    <u>my resume</u>
+                  </a>
+                </p>
+              </div>
+              <div className="mt-4">
+                <h2 className="text-w-more">
+                  > would you like to know more?{" "}
+                  <em className="text-w-more-y">
+                    (type <span className="highlights">y</span>)
+                  </em>
+                </h2>
+                <input
+                  type="text"
+                  autoFocus
+                  className="text-w-more-y-input"
+                  onChange={e =>
+                    e.currentTarget.value.toLocaleLowerCase() === "y" &&
+                    showMoreInfo()
+                  }
+                ></input>
+                <p className="text-w-more-button">
+                  Click on{" "}
+                  <em
+                    onClick={() => {
+                      showMoreInfo();
+                    }}
+                    className="highlights"
+                  >
+                    <u>Yes</u>
+                  </em>
+                </p>
+              </div>
             </Typist>
-          )}
-          <div ref={scrollDivRef} />
+            {moreInfo && (
+              <Typist
+                cursor={{
+                  show: false
+                }}
+              >
+                <div className="mt-4">
+                  <h2>> age & origin</h2>
+                  <p>21 years old</p>
+                  <p>Belgium, Deinze 9850</p>
+                </div>
+                <div className="mt-4">
+                  <h2>> hobbies</h2>
+                  <p>drawing</p>
+                  <p>coding</p>
+                  <p>going out with friends</p>
+                  <p>listening to music</p>
+                  <p>watching series</p>
+                  <p>...</p>
+                </div>
+                <div className="mt-4 mb-4">
+                  <h2>> professional social medias</h2>
+                  <div className="d-flex flex-column">
+                    <p className="pb-3 pt-3">
+                      <a href="https://github.com/EvaDenys99" target="blank">
+                        Github
+                      </a>
+                    </p>
+                    <p className="pb-3">
+                      <a
+                        href="https://www.linkedin.com/in/eva-denys-152119183/"
+                        target="blank"
+                        className="pb-3"
+                      >
+                        Linkedin
+                      </a>
+                    </p>
+                    <p className="pb-3" id="lastitem">
+                      <a
+                        href="https://www.behance.net/_eva_denys_"
+                        target="blank"
+                      >
+                        Behance
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </Typist>
+            )}
+            <div ref={scrollDivRef} />
+          </div>
         </div>
       </div>
-      {/* <footer className="small mt-4 pb-1 d-flex flex-row test">
-        >
-        <a
-          href="https://github.com/EvaDenys99"
-          target="blank"
-          className="pl-1 pr-1"
-        >
-          Github
-        </a>
-        .
-        <a
-          href="https://www.linkedin.com/in/eva-denys-152119183/"
-          target="blank"
-          className="pl-1 pr-1"
-        >
-          Linkedin
-        </a>
-        .
-        <a
-          href="https://www.behance.net/_eva_denys_"
-          className="pl-1"
-          target="blank"
-        >
-          Behance
-        </a>
-      </footer> */}
-    </div>
+    </Layout>
   );
 }
