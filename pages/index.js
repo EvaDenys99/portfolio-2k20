@@ -240,6 +240,7 @@ export default function Home() {
           Hello, I am a{" "}
           <span className="highlights bold">Creative Developer</span>.
         </h1>
+
         <img
           className="img-me img-fluid"
           src="/images/me.svg"
@@ -255,6 +256,7 @@ export default function Home() {
               <Typist.Delay ms={1250} />
               <div>
                 <h2> > introduction </h2>
+
                 <Typist.Delay ms={500} />
                 <p className="text-w-intro">
                   Hello, my name is Eva Denys. And I am a{" "}
@@ -313,6 +315,7 @@ export default function Home() {
                 </p>
               </div>
             </Typist>
+
             {moreInfo && (
               <Typist
                 cursor={{
