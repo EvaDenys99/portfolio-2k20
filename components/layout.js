@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Nav from "./nav";
+import moment from "moment";
 
 const Layout = ({ children }) => (
   <>
@@ -13,6 +14,9 @@ const Layout = ({ children }) => (
     </Head>
     <Nav />
     {children}
+    <footer className="small copywright-text">
+      © {moment().format("YYYY")} Eva Denys
+    </footer>
   </>
 );
 

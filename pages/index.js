@@ -1,10 +1,18 @@
 import Typist from "react-typist";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Layout from "../components/layout";
+import moment from "moment";
 
 export default function Home() {
   const [moreInfo, setMoreInfo] = useState(false);
+  const [myAge, setMyAge] = useState(false);
   const scrollDivRef = useRef(null);
+
+  useEffect(() => {
+    const age = moment("19990421", "YYYYMMDD").fromNow();
+    const newAge = age.substring(0, age.lastIndexOf(" "));
+    setMyAge(newAge);
+  }, []);
 
   const showMoreInfo = () => {
     setMoreInfo(true);
@@ -324,7 +332,7 @@ export default function Home() {
               >
                 <div className="mt-4">
                   <h2>> age & origin</h2>
-                  <p>21 years old</p>
+                  <p>{myAge} old </p>
                   <p>Belgium, Deinze 9850</p>
                 </div>
                 <div className="mt-4">
