@@ -14,7 +14,6 @@ const Blog = ({ categories, categoryArticles }) => {
             color: #403f3f;
           }
           .highlights,
-          .badge-outlined-active,
           a:hover {
             color: #951d4d;
           }
@@ -24,6 +23,11 @@ const Blog = ({ categories, categoryArticles }) => {
             background-color: #951d4d;
             color: #f8f8ff;
           }
+
+          .badge-outlined-active:hover {
+            background-color: transparent;
+          }
+
           @media only screen and (min-width: 0px) {
             .nav-item {
               color: #f8f8ff;

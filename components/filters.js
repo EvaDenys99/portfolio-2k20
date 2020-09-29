@@ -10,7 +10,7 @@ const Filters = ({ tags }) => {
       <ul className="mt-5 filters">
         <li
           className={
-            !router.query.id
+            router.route === "/projects" || router.route === "/blog"
               ? "badge badge-pill mr-3 badge-outlined-active"
               : "badge badge-pill mr-3 badge-outlined"
           }

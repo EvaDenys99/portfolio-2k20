@@ -35,7 +35,8 @@ function Nav() {
                       id="Path"
                       fill={
                         router.route === "/blog" ||
-                        router.route === "/article/[id]"
+                        router.route === "/article/[id]" ||
+                        router.route === "/blog/[id]"
                           ? "#403f3f"
                           : "#F8F8FF"
                       }
@@ -45,7 +46,8 @@ function Nav() {
                       id="Path"
                       fill={
                         router.route === "/blog" ||
-                        router.route === "/article/[id]"
+                        router.route === "/article/[id]" ||
+                        router.route === "/blog/[id]"
                           ? "#403f3f"
                           : "#F8F8FF"
                       }
@@ -56,7 +58,8 @@ function Nav() {
                       id="Path"
                       fill={
                         router.route === "/blog" ||
-                        router.route === "/article/[id]"
+                        router.route === "/article/[id]" ||
+                        router.route === "/blog/[id]"
                           ? "#951d4d"
                           : "#6DECB9"
                       }
@@ -66,7 +69,8 @@ function Nav() {
                       id="Path"
                       fill={
                         router.route === "/blog" ||
-                        router.route === "/article/[id]"
+                        router.route === "/article/[id]" ||
+                        router.route === "/blog/[id]"
                           ? "#951d4d"
                           : "#6DECB9"
                       }
@@ -76,7 +80,8 @@ function Nav() {
                       id="Path"
                       fill={
                         router.route === "/blog" ||
-                        router.route === "/article/[id]"
+                        router.route === "/article/[id]" ||
+                        router.route === "/blog/[id]"
                           ? "#951d4d"
                           : "#6DECB9"
                       }
@@ -85,7 +90,8 @@ function Nav() {
                       id="Path"
                       fill={
                         router.route === "/blog" ||
-                        router.route === "/article/[id]"
+                        router.route === "/article/[id]" ||
+                        router.route === "/blog/[id]"
                           ? "#951d4d"
                           : "#6DECB9"
                       }
@@ -95,7 +101,8 @@ function Nav() {
                       id="Path"
                       fill={
                         router.route === "/blog" ||
-                        router.route === "/article/[id]"
+                        router.route === "/article/[id]" ||
+                        router.route === "/blog/[id]"
                           ? "#951d4d"
                           : "#6DECB9"
                       }
@@ -106,7 +113,8 @@ function Nav() {
                       id="Path"
                       fill={
                         router.route === "/blog" ||
-                        router.route === "/article/[id]"
+                        router.route === "/article/[id]" ||
+                        router.route === "/blog/[id]"
                           ? "#951d4d"
                           : "#6DECB9"
                       }
@@ -116,7 +124,8 @@ function Nav() {
                       id="Path"
                       fill={
                         router.route === "/blog" ||
-                        router.route === "/article/[id]"
+                        router.route === "/article/[id]" ||
+                        router.route === "/blog/[id]"
                           ? "#951d4d"
                           : "#6DECB9"
                       }
@@ -125,7 +134,8 @@ function Nav() {
                       id="Rectangle"
                       fill={
                         router.route === "/blog" ||
-                        router.route === "/article/[id]"
+                        router.route === "/article/[id]" ||
+                        router.route === "/blog/[id]"
                           ? "#951d4d"
                           : "#6DECB9"
                       }
@@ -178,7 +188,9 @@ function Nav() {
                 viewBox="0 0 16 16"
                 className="bi bi-text-right"
                 fill={
-                  router.route === "/blog" || router.route === "/article/[id]"
+                  router.route === "/blog" ||
+                  router.route === "/article/[id]" ||
+                  router.route === "/blog/[id]"
                     ? "#403f3f"
                     : "#f8f8ff"
                 }
@@ -205,26 +217,34 @@ function Nav() {
           </li>
           <li
             className={
-              router.route === "/projects" || router.route === "/project/[id]"
+              router.route === "/projects" ||
+              router.route === "/project/[id]" ||
+              router.route === "/projects/[id]"
                 ? "nav-item nav-item-big nav-item-active thick"
                 : "nav-item nav-item-big"
             }
           >
             <a className="nav-link" href="/projects">
-              {router.route === "/projects" || router.route === "/project/[id]"
+              {router.route === "/projects" ||
+              router.route === "/project/[id]" ||
+              router.route === "/projects/[id]"
                 ? "> Projects"
                 : "Projects"}
             </a>
           </li>
           <li
             className={
-              router.route === "/blog" || router.route === "/article/[id]"
+              router.route === "/blog" ||
+              router.route === "/article/[id]" ||
+              router.route === "/blog/[id]"
                 ? "nav-item nav-item-big nav-item-active thick"
                 : "nav-item nav-item-big"
             }
           >
             <a className="nav-link" href="/blog">
-              {router.route === "/blog" || router.route === "/article/[id]"
+              {router.route === "/blog" ||
+              router.route === "/article/[id]" ||
+              router.route === "/blog/[id]"
                 ? "> Blog"
                 : "Blog"}
             </a>
@@ -247,27 +267,34 @@ function Nav() {
             </li>
             <li
               className={
-                router.route === "/projects" || router.route === "/project/[id]"
+                router.route === "/projects" ||
+                router.route === "/project/[id]" ||
+                router.route === "/projects/[id]"
                   ? "nav-item overlay-item nav-item-active thick animate__animated animate__fadeInRight"
                   : "nav-item overlay-item animate__animated animate__fadeInRight"
               }
             >
               <a className="nav-link" href="/projects">
                 {router.route === "/projects" ||
-                router.route === "/project/[id]"
+                router.route === "/project/[id]" ||
+                router.route === "/projects/[id]"
                   ? "> Projects"
                   : "Projects"}
               </a>
             </li>
             <li
               className={
-                router.route === "/blog" || router.route === "/article/[id]"
+                router.route === "/blog" ||
+                router.route === "/article/[id]" ||
+                router.route === "/blog/[id]"
                   ? "nav-item overlay-item nav-item-active thick animate__animated animate__fadeInRight animate__slow"
                   : "nav-item overlay-item animate__animated animate__fadeInRight animate__slow"
               }
             >
               <a className="nav-link" href="/blog">
-                {router.route === "/blog" || router.route === "/article/[id]"
+                {router.route === "/blog" ||
+                router.route === "/article/[id]" ||
+                router.route === "/blog/[id]"
                   ? "> Blog"
                   : "Blog"}
               </a>
