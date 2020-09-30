@@ -161,8 +161,7 @@ export async function getStaticPaths() {
         id: project.id
       }
     })),
-    fallback: false,
-    revalidate: 1
+    fallback: false
   };
 }
 
