@@ -38,7 +38,7 @@ const Card = ({ article }) => {
           <div className="mt-2 d-flex flex-row justify-content-between">
             <h3>> {article.title}</h3>
             <p className="small text-muted">
-              {router.route === "/projects"
+              {router.route === "/projects" || router.route === "/projects/[id]"
                 ? article.creationDate
                 : article.creationdate}
             </p>
