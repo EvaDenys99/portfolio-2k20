@@ -74,78 +74,90 @@ const Project = ({ project }) => {
             <h2>> tools</h2>
             <p>{project.tools}</p>
           </div>
-          <img
-            className="img-fluid mt-4"
-            src={
-              process.env.NODE_ENV !== "development"
-                ? project.images[0].url
-                : process.env.API_URL + project.images[0].url
-            }
-            alt={project.images[0].url}
-            height="200"
-          />
-          <p className="small text-muted">
-            <em>{project.images[0].caption}</em>
-          </p>
+          {project.images.length > 0 && (
+            <>
+              <img
+                className="img-fluid mt-4"
+                src={
+                  process.env.NODE_ENV !== "development"
+                    ? project.images[0].url
+                    : process.env.API_URL + project.images[0].url
+                }
+                alt={project.images[0].url}
+                height="200"
+              />
+              <p className="small text-muted">
+                <em>{project.images[0].caption}</em>
+              </p>
+            </>
+          )}
+
           <div className="mt-4">
             <h2>> the brief</h2>
             <ReactMarkdown source={project.briefing} />
           </div>
-          <img
-            className="img-fluid mt-4"
-            src={
-              process.env.NODE_ENV !== "development"
-                ? project.images[1].url
-                : process.env.API_URL + project.images[1].url
-            }
-            alt={project.headImage.url}
-            height="200"
-          />
-          <p className="small text-muted">
-            <em>{project.images[1].caption}</em>
-          </p>
+          {project.images.length > 1 && (
+            <>
+              <img
+                className="img-fluid mt-4"
+                src={
+                  process.env.NODE_ENV !== "development"
+                    ? project.images[1].url
+                    : process.env.API_URL + project.images[1].url
+                }
+                alt={project.headImage.url}
+                height="200"
+              />
+              <p className="small text-muted">
+                <em>{project.images[1].caption}</em>
+              </p>
+            </>
+          )}
+
           <div className="mt-4">
             <h2>> the solution</h2>
             <ReactMarkdown source={project.goal} />
           </div>
           <div className="mt-4 row row-cols-1 row-cols-md-2">
-            {project.vids.map((m, i) => (
-              <div className="pb-2" key={i}>
-                <video controls className="mb-2 pl-1 img-fluid">
-                  <source
+            {project.vids.length > 0 &&
+              project.vids.map((m, i) => (
+                <div className="pb-2" key={i}>
+                  <video controls className="mb-2 pl-1 img-fluid">
+                    <source
+                      src={
+                        process.env.NODE_ENV !== "development"
+                          ? m.url
+                          : process.env.API_URL + m.url
+                      }
+                      type="video/mp4"
+                    />
+                  </video>
+                  <p className="small text-muted">
+                    <em>{m.caption}</em>
+                  </p>
+                </div>
+              ))}
+            {project.images.length > 0 &&
+              project.images.map((m, i) => (
+                <div className="pb-2" key={i}>
+                  <img
                     src={
                       process.env.NODE_ENV !== "development"
                         ? m.url
                         : process.env.API_URL + m.url
                     }
-                    type="video/mp4"
+                    alt={
+                      process.env.NODE_ENV !== "development"
+                        ? m.url
+                        : process.env.API_URL + m.url
+                    }
+                    className="mb-2 pl-1 img-fluid "
                   />
-                </video>
-                <p className="small text-muted">
-                  <em>{m.caption}</em>
-                </p>
-              </div>
-            ))}
-            {project.images.map((m, i) => (
-              <div className="pb-2" key={i}>
-                <img
-                  src={
-                    process.env.NODE_ENV !== "development"
-                      ? m.url
-                      : process.env.API_URL + m.url
-                  }
-                  alt={
-                    process.env.NODE_ENV !== "development"
-                      ? m.url
-                      : process.env.API_URL + m.url
-                  }
-                  className="mb-2 pl-1 img-fluid "
-                />
-                <p className="small text-muted">
-                  <em>{m.caption}</em>
-                </p>
-              </div>
-            ))}
+                  <p className="small text-muted">
+                    <em>{m.caption}</em>
+                  </p>
+                </div>
+              ))}
           </div>
         </div>
       </div>

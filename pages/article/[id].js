@@ -71,59 +71,66 @@ const Article = ({ article }) => {
             ))}
           </div>
           <ReactMarkdown source={article.description} />
-          <img
-            className="img-fluid mt-4"
-            src={
-              process.env.NODE_ENV !== "development"
-                ? article.images[0].url
-                : process.env.API_URL + article.images[0].url
-            }
-            alt={article.images[0].url}
-            height="200"
-          />
-          <p className="small text-muted">
-            <em>{article.images[0].caption}</em>
-          </p>
+          {article.images.length > 1 && (
+            <>
+              <img
+                className="img-fluid mt-4"
+                src={
+                  process.env.NODE_ENV !== "development"
+                    ? article.images[0].url
+                    : process.env.API_URL + article.images[0].url
+                }
+                alt={article.images[0].url}
+                height="200"
+              />
+              <p className="small text-muted">
+                <em>{article.images[0].caption}</em>
+              </p>
+            </>
+          )}
+
           <ReactMarkdown className="mt-4" source={article.content} />
           <div className="mt-4 row row-cols-1 row-cols-md-2">
-            {article.images.map((m, i) => (
-              <div className="pb-2" key={i}>
-                <img
-                  src={
-                    process.env.NODE_ENV !== "development"
-                      ? m.url
-                      : process.env.API_URL + m.url
-                  }
-                  alt={
-                    process.env.NODE_ENV !== "development"
-                      ? m.url
-                      : process.env.API_URL + m.url
-                  }
-                  className="mb-2 pl-1 img-fluid"
-                />
-                <p className="small text-muted">
-                  <em>{m.caption}</em>
-                </p>
-              </div>
-            ))}
-            {article.videos.map((m, i) => (
-              <div className="pb-2" key={i}>
-                <video controls className="mb-2 pl-1 img-fluid">
-                  <source
+            {article.images.length > 0 &&
+              article.images.map((m, i) => (
+                <div className="pb-2" key={i}>
+                  <img
                     src={
                       process.env.NODE_ENV !== "development"
                         ? m.url
                         : process.env.API_URL + m.url
                     }
-                    type="video/mp4"
+                    alt={
+                      process.env.NODE_ENV !== "development"
+                        ? m.url
+                        : process.env.API_URL + m.url
+                    }
+                    className="mb-2 pl-1 img-fluid"
                   />
-                  Your browser does not support HTML video.
-                </video>
-                <p className="small text-muted">
-                  <em>{m.caption}</em>
-                </p>
-              </div>
-            ))}
+                  <p className="small text-muted">
+                    <em>{m.caption}</em>
+                  </p>
+                </div>
+              ))}
+            {article.videos.length > 0 &&
+              article.videos.map((m, i) => (
+                <div className="pb-2" key={i}>
+                  <video controls className="mb-2 pl-1 img-fluid">
+                    <source
+                      src={
+                        process.env.NODE_ENV !== "development"
+                          ? m.url
+                          : process.env.API_URL + m.url
+                      }
+                      type="video/mp4"
+                    />
+                    Your browser does not support HTML video.
+                  </video>
+                  <p className="small text-muted">
+                    <em>{m.caption}</em>
+                  </p>
+                </div>
+              ))}
           </div>
         </div>
       </div>
