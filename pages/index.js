@@ -279,7 +279,7 @@ export default function Home() {
                 <Typist.Delay ms={500} />
                 <div className="text-w-grad">
                   <p className="highlights mb-2">
-                    BA Digital Design & Development
+                    PBA Digital Design & Development
                   </p>
                   <p>@ Howest University of Applied Sciences</p>
                 </div>
@@ -289,7 +289,7 @@ export default function Home() {
                 <Typist.Delay ms={500} />
                 <a href="mailto: evadenys@hotmail.com">evadenys@hotmail.com</a>
                 <p>
-                  <a href="" download className="">
+                  <a href="/CV_EvaDenys.pdf" download>
                     <u>my resume</u>
                   </a>
                 </p>
@@ -356,7 +356,7 @@ export default function Home() {
                     </p>
                     <p className="pb-3">
                       <a
-                        href="https://www.linkedin.com/in/eva-denys-152119183/"
+                        href="https://www.linkedin.com/in/eva-denys/"
                         target="blank"
                         className="pb-3"
                       >
