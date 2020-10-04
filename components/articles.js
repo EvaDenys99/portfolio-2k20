@@ -13,9 +13,8 @@ const Articles = ({ articles }) => {
         })}
         {articles.length === 0 && (
           <p className="small">
-            There are no{" "}
-            {router.route === "/projects" ? "Projects" : "Articles"} available
-            for this tag.
+            {router.route === "/projects" ? "Projects" : "Articles"} for this
+            tag are not avaible or are coming soon.
           </p>
         )}
       </div>
