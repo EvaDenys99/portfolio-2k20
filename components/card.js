@@ -11,13 +11,15 @@ const Card = ({ article }) => {
   return (
     <Link
       as={
-        router.pathname === "/projects"
+        router.route === "/projects" || router.route === "/projects/[id]"
           ? `/project/${article.id}`
           : `/article/${article.id}`
       }
       href={{
         pathname:
-          router.pathname === "/projects" ? "/project/[id]" : "/article/[id]"
+          router.route === "/projects" || router.route === "/projects/[id]"
+            ? "/project/[id]"
+            : "/article/[id]"
       }}
     >
       <a className="col mb-4">
