@@ -70,7 +70,7 @@ const Article = ({ article }) => {
               </p>
             ))}
           </div>
-          <ReactMarkdown source={article.description} />
+          <ReactMarkdown className="line-break" source={article.description} />
           {article.images.length > 1 && (
             <>
               <img
@@ -88,8 +88,7 @@ const Article = ({ article }) => {
               </p>
             </>
           )}
-
-          <ReactMarkdown className="mt-4" source={article.content} />
+          <ReactMarkdown className="mt-4 line-break" source={article.content} />
           <div className="mt-4 row row-cols-1 row-cols-md-2">
             {article.images.length > 0 &&
               article.images.map((m, i) => (

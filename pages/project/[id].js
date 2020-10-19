@@ -54,7 +54,7 @@ const Project = ({ project }) => {
               </p>
             ))}
           </div>
-          <ReactMarkdown source={project.bio} />
+          <ReactMarkdown className="line-break" source={project.bio} />
           {project.link && (
             <p className="mt-2 ">
               <em>
@@ -94,7 +94,7 @@ const Project = ({ project }) => {
 
           <div className="mt-4">
             <h2>> the brief</h2>
-            <ReactMarkdown source={project.briefing} />
+            <ReactMarkdown className="line-break" source={project.briefing} />
           </div>
           {project.images.length > 1 && (
             <>
@@ -116,7 +116,7 @@ const Project = ({ project }) => {
 
           <div className="mt-4">
             <h2>> the solution</h2>
-            <ReactMarkdown source={project.goal} />
+            <ReactMarkdown className="line-break" source={project.goal} />
           </div>
           <div className="mt-4 row row-cols-1 row-cols-md-2">
             {project.vids.length > 0 &&

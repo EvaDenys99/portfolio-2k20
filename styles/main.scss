@@ -6,6 +6,10 @@
 @import "index";
 @import "filters";
 
+.line-break {
+  white-space: pre-wrap;
+}
+
 html,
 body {
   padding: 0;

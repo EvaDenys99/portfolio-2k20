@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@uiw/react-markdown-preview": "^1.0.9",
     "animate.css": "^4.1.1",
     "bootstrap": "^4.5.2",
     "css-loader": "^4.3.0",

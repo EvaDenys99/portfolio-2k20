@@ -2,7 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/projects/[id]": "pages/projects/[id].js",
-  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js",
-  "/project/[id]": "pages/project/[id].js"
+  "/article/[id]": "pages/article/[id].js"
 }

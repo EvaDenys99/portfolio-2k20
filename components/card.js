@@ -24,7 +24,6 @@ const Card = ({ article }) => {
     >
       <a className="col mb-4">
         <div>
-          {console.log("pdf")}
           <div className="mb-2">
             <img
               className={
