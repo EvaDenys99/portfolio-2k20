@@ -68,7 +68,7 @@ const Project = ({ project }) => {
 
           <div className="mt-4">
             <h2>> team</h2>
-            <p>{project.team}</p>
+            <ReactMarkdown className="line-break" source={project.team} />
           </div>
           <div className="mt-4">
             <h2>> tools</h2>
