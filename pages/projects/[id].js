@@ -3,31 +3,36 @@ import Articles from "../../components/articles";
 import Filters from "../../components/filters";
 import { getCategories, getCategoryProjects } from "../../lib/api";
 import Layout from "../../components/layout";
+import { useRouter } from "next/router";
 
 const Projects = ({ categories, categoryProjects }) => {
-  return (
-    <Layout>
-      <div>
-        <style jsx global>{`
-          body {
-            background-color: #151515;
-            background-image: radial-gradient(
-              circle at bottom right,
-              #2c2c2c,
-              #0c0c0c
-            );
-            background-attachment: fixed;
-            color: #f8f8ff;
-          }
-        `}</style>
-        <h1 className="d-none">Projects</h1>
-        <Filters tags={categories} />
-        <div className="container animate__animated animate__fadeIn">
-          <Articles articles={categoryProjects} />
+  const router = useRouter();
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  } else
+    return (
+      <Layout>
+        <div>
+          <style jsx global>{`
+            body {
+              background-color: #151515;
+              background-image: radial-gradient(
+                circle at bottom right,
+                #2c2c2c,
+                #0c0c0c
+              );
+              background-attachment: fixed;
+              color: #f8f8ff;
+            }
+          `}</style>
+          <h1 className="d-none">Projects</h1>
+          <Filters tags={categories} />
+          <div className="container animate__animated animate__fadeIn">
+            <Articles articles={categoryProjects} />
+          </div>
         </div>
-      </div>
-    </Layout>
-  );
+      </Layout>
+    );
 };
 
 export async function getStaticPaths() {
@@ -38,7 +43,7 @@ export async function getStaticPaths() {
         id: category.id
       }
     })),
-    fallback: false
+    fallback: true
   };
 }
 
