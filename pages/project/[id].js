@@ -6,10 +6,6 @@ import { useRouter } from "next/router";
 
 const Project = ({ project }) => {
   const router = useRouter();
-  const imageUrl =
-    process.env.NODE_ENV !== "development"
-      ? project.headImage.url
-      : process.env.API_URL + project.headImage.url;
 
   if (router.isFallback) {
     return <div>Loading...</div>;
@@ -42,7 +38,11 @@ const Project = ({ project }) => {
           <div className="animate__animated animate__fadeIn animate__slow">
             <img
               className="img-fluid border border-secondary mb-3"
-              src={imageUrl}
+              src={
+                process.env.NODE_ENV !== "development"
+                  ? project.headImage.url
+                  : process.env.API_URL + project.headImage.url
+              }
               alt={project.headImage.url}
               height="200"
             />
