@@ -125,7 +125,7 @@ const Article = ({ article }) => {
               {article.videos.length > 0 &&
                 article.videos.map((m, i) => (
                   <div className="pb-2" key={i}>
-                    <video controls className="mb-2 pl-1 img-fluid">
+                    <video controls autoPlay className="mb-2 pl-1 img-fluid">
                       <source
                         src={
                           process.env.NODE_ENV !== "development"
