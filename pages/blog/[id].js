@@ -12,7 +12,7 @@ const Blog = ({ categories, categoryArticles }) => {
     return <div>Loading...</div>;
   } else
     return (
-      <Layout>
+      <Layout pageTitle="Eva Denys Blog" description="The blog of Eva Denys">
         <div>
           <style jsx global>{`
             body {

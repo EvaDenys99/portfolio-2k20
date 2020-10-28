@@ -2,10 +2,11 @@ import Head from "next/head";
 import Nav from "./nav";
 import moment from "moment";
 
-const Layout = ({ children }) => (
+const Layout = ({ children, pageTitle, description }) => (
   <>
     <Head>
-      <title>Eva Denys</title>
+      <title>{pageTitle}</title>
+      <meta name="description" content={description} />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link
         rel="stylesheet"

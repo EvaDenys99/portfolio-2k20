@@ -11,7 +11,10 @@ const Projects = ({ categories, categoryProjects }) => {
     return <div>Loading...</div>;
   } else
     return (
-      <Layout>
+      <Layout
+        pageTitle="Eva Denys Projects"
+        description="Proud to present a few highlighted projects."
+      >
         <div>
           <style jsx global>{`
             body {

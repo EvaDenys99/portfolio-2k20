@@ -11,7 +11,7 @@ const Project = ({ project }) => {
     return <div>Loading...</div>;
   } else
     return (
-      <Layout>
+      <Layout pageTitle={project.title} description={project.bio}>
         <div className="container animate__animated animate__fadeIn">
           <style jsx global>{`
             body {

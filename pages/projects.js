@@ -6,7 +6,10 @@ import Layout from "../components/layout";
 
 const Projects = ({ categories, projects }) => {
   return (
-    <Layout>
+    <Layout
+      pageTitle="Eva Denys Projects"
+      description="Proud to present a few highlighted projects."
+    >
       <div>
         <style jsx global>{`
           body {

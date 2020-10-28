@@ -6,7 +6,7 @@ import { getArticles, getCategories } from "../lib/api";
 
 const Blog = ({ categories, articles }) => {
   return (
-    <Layout>
+    <Layout pageTitle="Eva Denys Blog" description="The blog of Eva Denys">
       <div>
         <style jsx global>{`
           body {

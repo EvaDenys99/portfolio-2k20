@@ -208,7 +208,7 @@ export default function Home() {
     );
   };
   return (
-    <Layout>
+    <Layout pageTitle="Eva Denys" description="A portfolio">
       <div className="mt-5 container animate__animated animate__fadeIn">
         <style jsx global>{`
           @media only screen and (min-width: 0px) {

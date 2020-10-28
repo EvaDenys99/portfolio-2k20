@@ -11,7 +11,7 @@ const Article = ({ article }) => {
     return <div>Loading...</div>;
   } else
     return (
-      <Layout>
+      <Layout pageTitle={article.title} description={article.description}>
         <div className="container animate__animated animate__fadeIn">
           <style jsx global>{`
             .highlights,
