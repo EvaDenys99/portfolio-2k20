@@ -1,0 +1,208 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><title>Make your own Quadruped Robot</title><meta name="description" content="Build your own Duke with this tutorial. Control with your phone, Alexa abilities, etc... Make making a quadruped robot fun!"/><meta name="viewport" content="initial-scale=1.0, width=device-width"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/><meta name="next-head-count" content="5"/><link rel="preload" href="/_next/static/css/bfeee58eaf18ca4165dc.css" as="style"/><link rel="stylesheet" href="/_next/static/css/bfeee58eaf18ca4165dc.css"/><link rel="preload" href="/_next/static/css/01878a9e5aa074951214.css" as="style"/><link rel="stylesheet" href="/_next/static/css/01878a9e5aa074951214.css"/><link rel="preload" href="/_next/static/chunks/main-ad096d235be7e3309947.js" as="script"/><link rel="preload" href="/_next/static/chunks/webpack-ccf5ab034a524403276a.js" as="script"/><link rel="preload" href="/_next/static/chunks/framework.5e03480598ad1120f007.js" as="script"/><link rel="preload" href="/_next/static/chunks/e22536ac.bbf891a3461cc9dcfc12.js" as="script"/><link rel="preload" href="/_next/static/chunks/commons.1442a74259c042993204.js" as="script"/><link rel="preload" href="/_next/static/chunks/pages/_app-6fe09ca7fd3f2b69689e.js" as="script"/><link rel="preload" href="/_next/static/chunks/75fc9c18.b78d99a337185d9a0ae9.js" as="script"/><link rel="preload" href="/_next/static/chunks/1275a3f23fb4885f6637e7492cf96f3e766b772d.ff2e0811c95450e7eff1.js" as="script"/><link rel="preload" href="/_next/static/chunks/5c6650fa2f810aa9d2e4ebd78cbb8aa8c3baebf3.50f4f7c49f9be081c814.js" as="script"/><link rel="preload" href="/_next/static/chunks/pages/article/%5Bid%5D-6548b120ba27f15ad9b2.js" as="script"/><style id="__jsx-3785666734">.highlights,a:hover{color:#951d4d;}@media only screen and (min-width:0px){.nav-item{color:#f8f8ff;}.nav-item-active{color:#05f0b5;}}@media only screen and (min-width:720px){.nav-item{color:#403f3f;}.nav-item-active{color:#951d4d;}}</style></head><body><div id="__next"><nav class="navbar sticky-top navbar-expand"><a class="navbar-brand" href="/"><svg width="1.4em" height="1.4em" viewBox="0 0 24 24" class="navbar-brand-logo" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="New-Officieel" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="mobile-home" transform="translate(-16.000000, -16.000000)" fill-rule="nonzero"><g id="Group" transform="translate(16.000000, 16.000000)"><g id="logo" transform="translate(0.000000, 0.000000)"><polygon id="Path" fill="#403f3f" points="5.05107692 3.60737081e-14 5.05107692 1.31261538 1.58169231 1.31261538 1.58169231 15.144 5.07046154 15.144 5.07046154 16.4570769 -2.86949951e-14 16.4570769 -2.86949951e-14 3.60737081e-14"></polygon><polygon id="Path" fill="#403f3f" points="18.9424615 16.4570769 18.9424615 15.144 22.4118462 15.144 22.4118462 1.31307692 18.9230769 1.31307692 18.9230769 0 23.9958462 0 23.9958462 16.4570769"></polygon><path d="M8.96030753,15.8224615 C8.96336082,15.4337089 9.28044251,15.1207474 9.66920179,15.122769 C10.0579611,15.1248103 10.3717548,15.4410684 10.3707475,15.8298317 C10.3697354,16.218595 10.0543031,16.5332308 9.66553846,16.5332308 C9.27505042,16.5304398 8.96004398,16.2129595 8.96030753,15.8224615 L8.96030753,15.8224615 Z" id="Path" fill="#951d4d"></path><path d="M11.3584609,15.8169231 C11.3617686,15.4282331 11.6789605,15.1155036 12.0676583,15.1176921 C12.4563561,15.1199036 12.7699877,15.4362036 12.7688976,15.8249061 C12.7678018,16.2136086 12.4523964,16.5281538 12.0636923,16.5281538 C11.6730241,16.5253618 11.3579439,16.2076009 11.3584609,15.8169231 Z" id="Path" fill="#951d4d"></path><path d="M13.753846,15.8224615 C13.7568993,15.4337089 14.073981,15.1207474 14.4627403,15.122769 C14.8514995,15.1248103 15.1652933,15.4410684 15.164286,15.8298317 C15.1632738,16.218595 14.8478415,16.5332308 14.4590769,16.5332308 C14.0685889,16.5304398 13.7535824,16.2129595 13.753846,15.8224615 L13.753846,15.8224615 Z" id="Path" fill="#951d4d"></path><polygon id="Path" fill="#951d4d" points="13.986 8.95569231 15.6636923 8.96030769 15.6549231 1.34123077 17.8744615 1.32738462 17.8744615 0.000461538462 13.9883077 0.036"></polygon><polygon id="Path" fill="#951d4d" points="15.7015385 15.1596923 15.7038462 16.4524615 17.8864615 16.4635385 17.8924615 15.1573846"></polygon><path d="M6.25523077,15.1795385 L6.25523077,16.4935385 L8.42076923,16.4935385 L8.42076923,15.1707692 C8.42076923,15.1707692 6.25523077,15.1647692 6.25523077,15.1795385 Z" id="Path" fill="#951d4d"></path><path d="M5.17338462,7.19676923 L5.17338462,8.96307692 L11.2010769,8.96307692 L11.2010769,7.2 C11.2010769,7.2 5.17338462,7.17461538 5.17338462,7.19676923 Z" id="Path" fill="#951d4d"></path><rect id="Rectangle" fill="#951d4d" x="6.23492308" y="0.0378461538" width="5.328" height="1.32415385"></rect></g></g></g></g></svg><span class="navbar-brand-text small">&gt;_<span class="highlights">E</span>va<!-- --> <span class="highlights">D</span>enys</span></a><div class="mr-auto"></div><ul class="navbar-nav"><li class="nav-item nav-item-responsive"><svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-text-right" fill="#403f3f" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"></path></svg></li><li class="nav-item nav-item-big"><a class="nav-link" href="/">Home</a></li><li class="nav-item nav-item-big"><a class="nav-link" href="/projects">Projects</a></li><li class="nav-item nav-item-big nav-item-active thick"><a class="nav-link" href="/blog">&gt; Blog</a></li></ul></nav><div class="jsx-3785666734 container animate__animated animate__fadeIn"><nav aria-label="breadcrumb" class="jsx-3785666734"><ol class="jsx-3785666734 breadcrumb small pt-4"><li class="jsx-3785666734 breadcrumb-item active"><a href="/blog" class="jsx-3785666734">Blogposts</a></li><li aria-current="page" class="jsx-3785666734 breadcrumb-item">&gt;_<!-- -->Make your own Quadruped Robot</li></ol></nav><div class="jsx-3785666734 animate__animated animate__fadeIn animate__slow"><img src="https://res.cloudinary.com/eva1999/image/upload/v1601475315/IMG_0016_0bd8c17f02.jpg" alt="https://res.cloudinary.com/eva1999/image/upload/v1601475315/IMG_0016_0bd8c17f02.jpg" height="200" class="jsx-3785666734 img-fluid border border-info mb-3"/><div class="jsx-3785666734 d-flex flex-row justify-content-between"><h1 class="jsx-3785666734">Make your own Quadruped Robot</h1><div class="jsx-3785666734"><p class="jsx-3785666734 small text-muted text-right">By <!-- -->Eva Denys</p><p class="jsx-3785666734 small text-muted text-right">2019-12-20</p></div></div><div class="jsx-3785666734 d-flex flex-row pb-2"><p class="jsx-3785666734 small pr-1 text-muted">#<!-- -->Development</p><p class="jsx-3785666734 small pr-1 text-muted">#<!-- -->Arduino Uno</p><p class="jsx-3785666734 small pr-1 text-muted">#<!-- -->Raspberry Pi</p></div><div class="line-break"><p>Build your own Duke with this tutorial. Control with your phone, Alexa abilities, etc... Make making a quadruped robot fun!</p></div><img src="https://res.cloudinary.com/eva1999/image/upload/v1601470602/prototype_f5d3ec3bec.jpg" alt="https://res.cloudinary.com/eva1999/image/upload/v1601470602/prototype_f5d3ec3bec.jpg" height="200" class="jsx-3785666734 img-fluid mt-4"/><p class="jsx-3785666734 small text-muted"><em class="jsx-3785666734">Prototype</em></p><div class="mt-4 line-break"><h6>Components</h6><p><em>What I used to build Duke</em></p><ul><li>Raspberry Pi 4B – 4GB RAM</li><li>Arduino Uno</li><li>Arduino 16-channel PWM / Servo Shield</li><li>Reely Micro-servo S-8246 Analoge servo</li><li>Raspberry Pi Camera V2 video module</li><li>Action powerbank</li><li>Batterij pack – 4AA</li><li>Usb cables</li><li>Action music box</li><li>Aux cable</li><li>USB microphone</li><li>Wooden sticks like those from an ice cream</li><li>Cardboard </li></ul><p><em>For the chassis</em></p><ul><li>mePed v2 design</li><li>40ea – M3 x 10mm Screws</li><li>16ea – M3 x 12mm Screws</li><li>24ea – M3 Hex Nuts</li><li>32ea – M3 Nyloc Hex Nuts</li></ul><p><em>other option is ordering the kit from <a href="http://www.meped.io/mepedv2">http://www.meped.io/mepedv2</a></em>
+<!-- --> </p><h4>Step 1: Making and assembling the hardware</h4><p> <!-- -->
+First get you a dad like mine that is good in assembling hardware and can help you with this step. Then solder the Arduino 16-channel PWM together and test every input that exists on it.<br/> <!-- -->
+After that eat a lot of ice creams and keep the wooden sticks, just kidding ;) . You can go and buy these wooden sticks at your local drug store, with these sticks and a piece of cardboard you can make your first prototype. With this prototype, you can test the form of your robot. Like if you want it like a spider, a cat, etc. it is best that you test it first before you officially make a design out of wood. Then add the servos at the places you want on the prototype and test them Arduino 16-channel PWM / Servo Shield up top attached on top of the Arduino. 
+<!-- --> <!-- -->
+<em>Test it with this Arduino code:</em>
+<!-- --> </p><pre><code class="language-#include">#include &lt;Adafruit_PWMServoDriver.h&gt;
+
+// called this way, it uses the default address 0x40
+Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
+// you can also call it with a different address you want
+//Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver(0x41);
+// you can also call it with a different address and I2C interface
+//Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver(0x40, Wire);
+
+void setup() {
+  Serial.begin(9600);
+  Serial.println(&quot;GPIO test!&quot;);
+
+  pwm.begin();
+  pwm.setPWMFreq(1000);  // Set to whatever you like, we don&#x27;t use it in this demo!
+
+  // if you want to really speed stuff up, you can go into &#x27;fast 400khz I2C&#x27; mode
+  // some i2c devices dont like this so much so if you&#x27;re sharing the bus, watch
+  // out for this!
+  Wire.setClock(400000);
+}
+
+void loop() {
+  // Drive each pin in a &#x27;wave&#x27;
+  for (uint8_t pin=0; pin&lt;16; pin++) {
+    pwm.setPWM(pin, 4096, 0);       // turns pin fully on
+    delay(100);
+    pwm.setPWM(pin, 0, 4096);       // turns pin fully off
+  }
+}</code></pre><p> <!-- -->
+Make sure that every Servo is calibrated the right way or else you will get some weird movements! (picture 2)
+<!-- --> <!-- -->
+It can happen that your prototype is not strong enough to hold his own weight and move like it should be moving, this happened with my prototype. What I did was just make my official design but that’s a decision up to you.
+<!-- --> <!-- -->
+When you decide that you want to take your robot to the next level, you will need a laser cutter that cuts wood or order the mePed v2 kit. If you chose for the laser cutter you need to take the design of the mePed v2 (picture 3) and get the parts cut out, I used 3mm wood. After that you place everything in his place and assemble it together with the screws etc. 
+<!-- --> <!-- -->
+Now you have your base chassis with servos etc. if you want more levels for placing your micro controllers on, like me, please feel free to build further at the hardware.
+<!-- --> <!-- -->
+<em>Tip: to make sure the robot does not slip or fall while doing his tricks please attach some soft-anti slip footers at the base of his paws.</em>
+<!-- --> <!-- -->
+<!-- --> </p><h4>Step 2: The software</h4><p> <!-- -->
+I want to control my robot, Duke, with my phone. I want Duke to walk forward, backward, left, right but I also want it to do some awesome tricks like wave, take a bow, kick away a ball, etc. While doing all that I also want to have a view from what Duke is doing, basically a camera on his eye level. 
+<!-- --> </p><h6>Camera</h6><p>So that’s what we start with, testing out the Raspberry Pi Camera V2 video module with the tutorial of Raspberry Pi himself. <a href="https://projects.raspberrypi.org/en/projects/getting-started-with-picamera">https://projects.raspberrypi.org/en/projects/getting-started-with-picamera</a> 
+Then to integrate this camera view into the website, which will be build with HTML5 etc., we follow the tutorial of this guy; <a href="https://www.youtube.com/watch?v=5QAHlZoPlgI">https://www.youtube.com/watch?v=5QAHlZoPlgI</a> . He tells us exactly what we need to do to simply integrate the video in our HTML and explains everything, even gives us the needs for how to tweak the settings of the camera.
+<!-- --> </p><h6>Arduino movement control</h6><p>With the open source robot mePed v2 there not only the chassis available but also the code,  <a href="http://www.meped.io/sites/default/files/2017-06/mePed_IR_Starter_Program_0.ino">http://www.meped.io/sites/default/files/2017-06/mePed_IR_Starter_Program_0.ino</a> , this is written in C++. But between the mePed and Duke there are a lot of differences like the mePed is controlled by an IR Remote, they do not protect their Arduino with a Servo Shield but they use a Servo library instead, etc. 
+<!-- --> <!-- -->
+So we need to rewrite their Arduino code to code that our Arduino + Servo Shield will understand. 
+<!-- --> <!-- -->
+If you don’t have a lot of knowledge of Arduino code, it does not really matter, this is purely to understand the communication between Arduino and its components.
+<!-- --> <!-- -->
+We can’t use things like Servo.attach(PIN) and myServo.write(ANGLE) instead we need to set the PWM of the servo and then give it a pulse width to define the angle. After getting to know the code, understanding and modifying it to our application, you can start testing each movement on your own Duke.
+<!-- --> <!-- -->
+Our code:
+<!-- --> </p><pre><code class="language-#include">#include &lt;Adafruit_PWMServoDriver.h&gt;
+
+// called this way, it uses the default address 0x40
+Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
+
+#define MIN_PULSE_WIDTH     650
+#define MAX_PULSE_WIDTH     2350
+#define DEFAULT_PULSE_WIDTH     1500
+#define FREQUENCY     50
+
+void setup() {
+  //here you call a function like &quot;center_servos()&quot; and then your duke will do it
+}
+
+void center_servos(){
+  pwm.setPWM(13, 0, pulseWidth(90));
+  pwm.setPWM(15, 0, pulseWidth(90));
+  pwm.setPWM(3, 0, pulseWidth(90));
+  pwm.setPWM(1, 0, pulseWidth(90));
+  pwm.setPWM(2, 0, pulseWidth(90));
+  pwm.setPWM(0, 0, pulseWidth(90));
+  pwm.setPWM(12, 0, pulseWidth(90));
+  pwm.setPWM(14, 0, pulseWidth(90));
+  Serial.println(&quot;servos centered&quot;);
+
+  int s11 = 90; //front left pivot servo
+  int s12 = 90; //front left lift servo
+  int s21 = 90; //back left pivot servo
+  int s22 = 90; //back left lift servo
+  int s31 = 90; //back right pivot servo
+  int s32 = 90; //back right lift servo
+  int s41 = 90; //front right pivot servo
+  int s42 = 90; //front right lift servo
+ }
+
+void lean_left(){
+  pwm.setPWM(15, 0, pulseWidth(15));
+  pwm.setPWM(1, 0, pulseWidth(15));
+  pwm.setPWM(0, 0, pulseWidth(150));
+  pwm.setPWM(14, 0, pulseWidth(150));
+  Serial.println(&quot;lean_left done&quot;);
+ }
+ 
+void lean_right(){
+  pwm.setPWM(15, 0, pulseWidth(150));
+  pwm.setPWM(1, 0, pulseWidth(150));
+  pwm.setPWM(0, 0, pulseWidth(15));
+  pwm.setPWM(14, 0, pulseWidth(15));
+  Serial.println(&quot;lean_right done&quot;);
+ }
+
+void wave(){
+  center_servos();
+  pwm.setPWM(1, 0, pulseWidth(45));
+  pwm.setPWM(0, 0, pulseWidth(45));
+  delay(200);
+  pwm.setPWM(14, 0, pulseWidth(0));
+  delay(200);
+  pwm.setPWM(12, 0, pulseWidth(180));
+  delay(200);
+  pwm.setPWM(12, 0, pulseWidth(30));
+  delay(300);
+  pwm.setPWM(12, 0, pulseWidth(180));
+  delay(300);
+  pwm.setPWM(12, 0, pulseWidth(30));
+  delay(300);
+  pwm.setPWM(12, 0, pulseWidth(s41));
+  delay(300);
+  pwm.setPWM(12, 0, pulseWidth(s42));
+  center_servos();
+  Serial.println(&quot;wave done&quot;);
+ }
+
+void bow(){
+  center_servos();
+  delay(200);
+  pwm.setPWM(15, 0, pulseWidth(15));
+  pwm.setPWM(14, 0, pulseWidth(15));
+  delay(700);
+  pwm.setPWM(15, 0, pulseWidth(90));
+  pwm.setPWM(14, 0, pulseWidth(90));
+  delay(700);
+  Serial.println(&quot;bow done&quot;);
+ }
+
+
+ void dance(){
+  center_servos();
+  delay(100);
+  lean_left();
+  delay(300);
+  lean_right();
+  delay(300);
+  lean_left();
+  delay(300);
+  lean_right();
+  delay(300);
+  lean_left();
+  delay(300);
+  lean_right();
+  delay(300);
+  lean_left();
+  delay(300);
+  lean_right();
+  delay(800);
+  center_servos();
+  delay(300);
+  bow();
+  center_servos();
+ }
+
+ 
+int pulseWidth(int angle){
+  int pulse_wide, analog_value;
+  pulse_wide = map(angle, 0, 180, MIN_PULSE_WIDTH, MAX_PULSE_WIDTH);
+  analog_value = int(float(pulse_wide) / 1000000 * FREQUENCY * 4096);
+  Serial.println(analog_value);
+  return analog_value
+}</code></pre><p> </p><h6>Johnny-five movement control</h6><p><em>Our control website is made out of HTML, CSS and JavaScript. Download the full code here <a href="https://github.com/EvaDenys99/PersonalProject">https://github.com/EvaDenys99/PersonalProject</a> . </em>
+<!-- --> <!-- -->
+To control our movements with our phone, we can’t use the Arduino code therefor we need to transform our code to a code that is understandable for JavaScript to use. 
+<!-- --> <!-- -->
+So that is where Johnny-five comes in, Johnny-five is an JavaScript Robotics &amp; IoT Platform. Easy to implement and to use. Just install Johnny-five by using, in our case, yarn add Johnny-five. And then on the server side require the package and make a new board instance. After doing that we will need to declare the controller, which is our Arduino Adafruit Servo shield, the PCA9685. Here is an example of Johnny-five self; <a href="http://johnny-five.io/examples/servo-PCA9685/">http://johnny-five.io/examples/servo-PCA9685/</a> . Now we can declare our servo&#x27;s and the pins they connect to.
+<!-- --> <!-- -->
+Code examples: 
+<!-- --> </p><pre><code class="language-const">const board = new five.Board({
+  repl: false
+});
+const controller = &quot;PCA9685&quot;;
+
+// Servo myServo1; // Front Left Pivot Servo
+  const FLPServo = new five.Servo({
+    controller,
+    pin: 13
+  });</code></pre><p> <!-- -->
+After turning the Arduino code into JavaScript code, we need to work on the communication as well. For this we are going to use Socket.io, we use this to trigger an event on our Arduino with our phone.
+<!-- --> <!-- -->
+To see the full code and inspect it go download it here; <a href="https://github.com/EvaDenys99/PersonalProject">https://github.com/EvaDenys99/PersonalProject</a> 
+<!-- --> </p><h6>Setting online on Raspberry Pi 4B</h6><p>I have never used a Raspberry Pi before in my life, so as an extra I wanted it to be used on my robot Duke. It is only necessary for the eye of Duke, our camera live feed. So I decided to also use my Raspberry Pi as a host for the control website. Using FileZilla to headless connect to the Raspberry Pi, we just drop our code there. And voila our code is online and working or is it not? Because we used yarn it does not start up from itself. So the solution is adding a file start.sh, here you just add the line “node index.js” and if you don’t want to manually start the camera every time you can add that line of code too. 
+<!-- --> <!-- -->
+Now our controls are online and working!
+<!-- --> <!-- -->
+<!-- --> </p><h4>Step 3: Simple Alexa abilities</h4><p> <!-- -->
+Some functionalities I want our Duke to have are things like play music, set timer, etc. Everything that an Alexa basically does, so I found us a working tutorial; <a href="https://developer.amazon.com/en-US/docs/alexa/alexa-voice-service/register-a-product.html">https://developer.amazon.com/en-US/docs/alexa/alexa-voice-service/register-a-product.html</a> . Not everything from it works because I live in Belgium, now I install my Action music box at the top of Duke, like some sort of hat. Then I connect it with an aux cable to my Raspberry Pi, as microphone I use an USB-microphone. 
+<!-- --> <!-- -->
+<!-- --> </p><h4>Step 4: Accessorize</h4><p> <!-- -->
+Make your own Duke have a personality, make him pretty, etc. And enjoy your very own quadruped robot!
+<!-- --> <!-- -->
+<!-- --> </p></div><div class="jsx-3785666734 mt-4 row row-cols-1 row-cols-md-2"><div class="jsx-3785666734 pb-2"><img src="https://res.cloudinary.com/eva1999/image/upload/v1601470602/prototype_f5d3ec3bec.jpg" alt="https://res.cloudinary.com/eva1999/image/upload/v1601470602/prototype_f5d3ec3bec.jpg" class="jsx-3785666734 mb-2 pl-1 img-fluid"/><p class="jsx-3785666734 small text-muted"><em class="jsx-3785666734">Prototype</em></p></div><div class="jsx-3785666734 pb-2"><img src="https://res.cloudinary.com/eva1999/image/upload/v1603130440/servo_c9a0daebd6.png" alt="https://res.cloudinary.com/eva1999/image/upload/v1603130440/servo_c9a0daebd6.png" class="jsx-3785666734 mb-2 pl-1 img-fluid"/><p class="jsx-3785666734 small text-muted"><em class="jsx-3785666734"></em></p></div><div class="jsx-3785666734 pb-2"><img src="https://res.cloudinary.com/eva1999/image/upload/v1603130338/me_Ped_19f80dfced.png" alt="https://res.cloudinary.com/eva1999/image/upload/v1603130338/me_Ped_19f80dfced.png" class="jsx-3785666734 mb-2 pl-1 img-fluid"/><p class="jsx-3785666734 small text-muted"><em class="jsx-3785666734"></em></p></div><div class="jsx-3785666734 pb-2"><img src="https://res.cloudinary.com/eva1999/image/upload/v1601470602/base_2e843d9189.jpg" alt="https://res.cloudinary.com/eva1999/image/upload/v1601470602/base_2e843d9189.jpg" class="jsx-3785666734 mb-2 pl-1 img-fluid"/><p class="jsx-3785666734 small text-muted"><em class="jsx-3785666734">Body basis</em></p></div><div class="jsx-3785666734 pb-2"><video class="jsx-3785666734 mb-2 pl-1 img-fluid"><source src="https://res.cloudinary.com/eva1999/video/upload/v1601470633/mov_e15cd71e0a.mp4" type="video/mp4" class="jsx-3785666734"/>Your browser does not support HTML video.</video><p class="jsx-3785666734 small text-muted"><em class="jsx-3785666734"></em></p></div></div></div></div><footer class="small copywright-text">© <!-- -->2021<!-- --> Eva Denys</footer></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"article":{"id":"2","title":"Make your own Quadruped Robot","content":"######  Components\n\n*What I used to build Duke*\n\n*\tRaspberry Pi 4B – 4GB RAM\n*\tArduino Uno\n*\tArduino 16-channel PWM / Servo Shield\n*\tReely Micro-servo S-8246 Analoge servo\n*\tRaspberry Pi Camera V2 video module\n*\tAction powerbank\n*\tBatterij pack – 4AA\n*\tUsb cables\n*\tAction music box\n*\tAux cable\n*\tUSB microphone\n*\tWooden sticks like those from an ice cream\n*\tCardboard \n\n*For the chassis*\n\n*\tmePed v2 design\n*\t40ea – M3 x 10mm Screws\n*\t16ea – M3 x 12mm Screws\n*\t24ea – M3 Hex Nuts\n*\t32ea – M3 Nyloc Hex Nuts\n\n*other option is ordering the kit from http://www.meped.io/mepedv2*\n\u0026nbsp\n#### Step 1: Making and assembling the hardware\n\u0026nbsp\nFirst get you a dad like mine that is good in assembling hardware and can help you with this step. Then solder the Arduino 16-channel PWM together and test every input that exists on it.  \n\u0026nbsp\nAfter that eat a lot of ice creams and keep the wooden sticks, just kidding ;) . You can go and buy these wooden sticks at your local drug store, with these sticks and a piece of cardboard you can make your first prototype. With this prototype, you can test the form of your robot. Like if you want it like a spider, a cat, etc. it is best that you test it first before you officially make a design out of wood. Then add the servos at the places you want on the prototype and test them Arduino 16-channel PWM / Servo Shield up top attached on top of the Arduino. \n\u0026nbsp\n*Test it with this Arduino code:*\n\u0026nbsp\n```#include \u003cWire.h\u003e\n#include \u003cAdafruit_PWMServoDriver.h\u003e\n\n// called this way, it uses the default address 0x40\nAdafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();\n// you can also call it with a different address you want\n//Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver(0x41);\n// you can also call it with a different address and I2C interface\n//Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver(0x40, Wire);\n\nvoid setup() {\n  Serial.begin(9600);\n  Serial.println(\"GPIO test!\");\n\n  pwm.begin();\n  pwm.setPWMFreq(1000);  // Set to whatever you like, we don't use it in this demo!\n\n  // if you want to really speed stuff up, you can go into 'fast 400khz I2C' mode\n  // some i2c devices dont like this so much so if you're sharing the bus, watch\n  // out for this!\n  Wire.setClock(400000);\n}\n\nvoid loop() {\n  // Drive each pin in a 'wave'\n  for (uint8_t pin=0; pin\u003c16; pin++) {\n    pwm.setPWM(pin, 4096, 0);       // turns pin fully on\n    delay(100);\n    pwm.setPWM(pin, 0, 4096);       // turns pin fully off\n  }\n}\n```\n\u0026nbsp\nMake sure that every Servo is calibrated the right way or else you will get some weird movements! (picture 2)\n\u0026nbsp\nIt can happen that your prototype is not strong enough to hold his own weight and move like it should be moving, this happened with my prototype. What I did was just make my official design but that’s a decision up to you.\n\u0026nbsp\nWhen you decide that you want to take your robot to the next level, you will need a laser cutter that cuts wood or order the mePed v2 kit. If you chose for the laser cutter you need to take the design of the mePed v2 (picture 3) and get the parts cut out, I used 3mm wood. After that you place everything in his place and assemble it together with the screws etc. \n\u0026nbsp\nNow you have your base chassis with servos etc. if you want more levels for placing your micro controllers on, like me, please feel free to build further at the hardware.\n\u0026nbsp\n*Tip: to make sure the robot does not slip or fall while doing his tricks please attach some soft-anti slip footers at the base of his paws.*\n\u0026nbsp\n\u0026nbsp\n#### Step 2: The software\n\u0026nbsp\nI want to control my robot, Duke, with my phone. I want Duke to walk forward, backward, left, right but I also want it to do some awesome tricks like wave, take a bow, kick away a ball, etc. While doing all that I also want to have a view from what Duke is doing, basically a camera on his eye level. \n\u0026nbsp\n###### Camera\nSo that’s what we start with, testing out the Raspberry Pi Camera V2 video module with the tutorial of Raspberry Pi himself. https://projects.raspberrypi.org/en/projects/getting-started-with-picamera \nThen to integrate this camera view into the website, which will be build with HTML5 etc., we follow the tutorial of this guy; https://www.youtube.com/watch?v=5QAHlZoPlgI . He tells us exactly what we need to do to simply integrate the video in our HTML and explains everything, even gives us the needs for how to tweak the settings of the camera.\n\u0026nbsp\n###### Arduino movement control\nWith the open source robot mePed v2 there not only the chassis available but also the code,  http://www.meped.io/sites/default/files/2017-06/mePed_IR_Starter_Program_0.ino , this is written in C++. But between the mePed and Duke there are a lot of differences like the mePed is controlled by an IR Remote, they do not protect their Arduino with a Servo Shield but they use a Servo library instead, etc. \n\u0026nbsp\nSo we need to rewrite their Arduino code to code that our Arduino + Servo Shield will understand. \n\u0026nbsp\nIf you don’t have a lot of knowledge of Arduino code, it does not really matter, this is purely to understand the communication between Arduino and its components.\n\u0026nbsp\nWe can’t use things like Servo.attach(PIN) and myServo.write(ANGLE) instead we need to set the PWM of the servo and then give it a pulse width to define the angle. After getting to know the code, understanding and modifying it to our application, you can start testing each movement on your own Duke.\n\u0026nbsp\nOur code:\n\u0026nbsp\n```#include \u003cWire.h\u003e\n#include \u003cAdafruit_PWMServoDriver.h\u003e\n\n// called this way, it uses the default address 0x40\nAdafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();\n\n#define MIN_PULSE_WIDTH     650\n#define MAX_PULSE_WIDTH     2350\n#define DEFAULT_PULSE_WIDTH     1500\n#define FREQUENCY     50\n\nvoid setup() {\n  //here you call a function like \"center_servos()\" and then your duke will do it\n}\n\nvoid center_servos(){\n  pwm.setPWM(13, 0, pulseWidth(90));\n  pwm.setPWM(15, 0, pulseWidth(90));\n  pwm.setPWM(3, 0, pulseWidth(90));\n  pwm.setPWM(1, 0, pulseWidth(90));\n  pwm.setPWM(2, 0, pulseWidth(90));\n  pwm.setPWM(0, 0, pulseWidth(90));\n  pwm.setPWM(12, 0, pulseWidth(90));\n  pwm.setPWM(14, 0, pulseWidth(90));\n  Serial.println(\"servos centered\");\n\n  int s11 = 90; //front left pivot servo\n  int s12 = 90; //front left lift servo\n  int s21 = 90; //back left pivot servo\n  int s22 = 90; //back left lift servo\n  int s31 = 90; //back right pivot servo\n  int s32 = 90; //back right lift servo\n  int s41 = 90; //front right pivot servo\n  int s42 = 90; //front right lift servo\n }\n\nvoid lean_left(){\n  pwm.setPWM(15, 0, pulseWidth(15));\n  pwm.setPWM(1, 0, pulseWidth(15));\n  pwm.setPWM(0, 0, pulseWidth(150));\n  pwm.setPWM(14, 0, pulseWidth(150));\n  Serial.println(\"lean_left done\");\n }\n \nvoid lean_right(){\n  pwm.setPWM(15, 0, pulseWidth(150));\n  pwm.setPWM(1, 0, pulseWidth(150));\n  pwm.setPWM(0, 0, pulseWidth(15));\n  pwm.setPWM(14, 0, pulseWidth(15));\n  Serial.println(\"lean_right done\");\n }\n\nvoid wave(){\n  center_servos();\n  pwm.setPWM(1, 0, pulseWidth(45));\n  pwm.setPWM(0, 0, pulseWidth(45));\n  delay(200);\n  pwm.setPWM(14, 0, pulseWidth(0));\n  delay(200);\n  pwm.setPWM(12, 0, pulseWidth(180));\n  delay(200);\n  pwm.setPWM(12, 0, pulseWidth(30));\n  delay(300);\n  pwm.setPWM(12, 0, pulseWidth(180));\n  delay(300);\n  pwm.setPWM(12, 0, pulseWidth(30));\n  delay(300);\n  pwm.setPWM(12, 0, pulseWidth(s41));\n  delay(300);\n  pwm.setPWM(12, 0, pulseWidth(s42));\n  center_servos();\n  Serial.println(\"wave done\");\n }\n\nvoid bow(){\n  center_servos();\n  delay(200);\n  pwm.setPWM(15, 0, pulseWidth(15));\n  pwm.setPWM(14, 0, pulseWidth(15));\n  delay(700);\n  pwm.setPWM(15, 0, pulseWidth(90));\n  pwm.setPWM(14, 0, pulseWidth(90));\n  delay(700);\n  Serial.println(\"bow done\");\n }\n\n\n void dance(){\n  center_servos();\n  delay(100);\n  lean_left();\n  delay(300);\n  lean_right();\n  delay(300);\n  lean_left();\n  delay(300);\n  lean_right();\n  delay(300);\n  lean_left();\n  delay(300);\n  lean_right();\n  delay(300);\n  lean_left();\n  delay(300);\n  lean_right();\n  delay(800);\n  center_servos();\n  delay(300);\n  bow();\n  center_servos();\n }\n\n \nint pulseWidth(int angle){\n  int pulse_wide, analog_value;\n  pulse_wide = map(angle, 0, 180, MIN_PULSE_WIDTH, MAX_PULSE_WIDTH);\n  analog_value = int(float(pulse_wide) / 1000000 * FREQUENCY * 4096);\n  Serial.println(analog_value);\n  return analog_value\n}\n```\n\u0026nbsp\n###### Johnny-five movement control\n*Our control website is made out of HTML, CSS and JavaScript. Download the full code here https://github.com/EvaDenys99/PersonalProject . *\n\u0026nbsp\nTo control our movements with our phone, we can’t use the Arduino code therefor we need to transform our code to a code that is understandable for JavaScript to use. \n\u0026nbsp\nSo that is where Johnny-five comes in, Johnny-five is an JavaScript Robotics \u0026 IoT Platform. Easy to implement and to use. Just install Johnny-five by using, in our case, yarn add Johnny-five. And then on the server side require the package and make a new board instance. After doing that we will need to declare the controller, which is our Arduino Adafruit Servo shield, the PCA9685. Here is an example of Johnny-five self; http://johnny-five.io/examples/servo-PCA9685/ . Now we can declare our servo's and the pins they connect to.\n\u0026nbsp\nCode examples: \n\u0026nbsp\n```const five = require(\"johnny-five\");\nconst board = new five.Board({\n  repl: false\n});\nconst controller = \"PCA9685\";\n\n// Servo myServo1; // Front Left Pivot Servo\n  const FLPServo = new five.Servo({\n    controller,\n    pin: 13\n  });\n```\n\u0026nbsp\nAfter turning the Arduino code into JavaScript code, we need to work on the communication as well. For this we are going to use Socket.io, we use this to trigger an event on our Arduino with our phone.\n\u0026nbsp\nTo see the full code and inspect it go download it here; https://github.com/EvaDenys99/PersonalProject \n\u0026nbsp\n###### Setting online on Raspberry Pi 4B\nI have never used a Raspberry Pi before in my life, so as an extra I wanted it to be used on my robot Duke. It is only necessary for the eye of Duke, our camera live feed. So I decided to also use my Raspberry Pi as a host for the control website. Using FileZilla to headless connect to the Raspberry Pi, we just drop our code there. And voila our code is online and working or is it not? Because we used yarn it does not start up from itself. So the solution is adding a file start.sh, here you just add the line “node index.js” and if you don’t want to manually start the camera every time you can add that line of code too. \n\u0026nbsp\nNow our controls are online and working!\n\u0026nbsp\n\u0026nbsp\n####  Step 3: Simple Alexa abilities\n\u0026nbsp\nSome functionalities I want our Duke to have are things like play music, set timer, etc. Everything that an Alexa basically does, so I found us a working tutorial; https://developer.amazon.com/en-US/docs/alexa/alexa-voice-service/register-a-product.html . Not everything from it works because I live in Belgium, now I install my Action music box at the top of Duke, like some sort of hat. Then I connect it with an aux cable to my Raspberry Pi, as microphone I use an USB-microphone. \n\u0026nbsp\n\u0026nbsp\n#### Step 4: Accessorize\n\u0026nbsp\nMake your own Duke have a personality, make him pretty, etc. And enjoy your very own quadruped robot!\n\u0026nbsp\n\u0026nbsp","creationdate":"2019-12-20","headImage":{"url":"https://res.cloudinary.com/eva1999/image/upload/v1601475315/IMG_0016_0bd8c17f02.jpg","caption":""},"images":[{"url":"https://res.cloudinary.com/eva1999/image/upload/v1601470602/prototype_f5d3ec3bec.jpg","caption":"Prototype"},{"url":"https://res.cloudinary.com/eva1999/image/upload/v1603130440/servo_c9a0daebd6.png","caption":""},{"url":"https://res.cloudinary.com/eva1999/image/upload/v1603130338/me_Ped_19f80dfced.png","caption":""},{"url":"https://res.cloudinary.com/eva1999/image/upload/v1601470602/base_2e843d9189.jpg","caption":"Body basis"}],"videos":[{"url":"https://res.cloudinary.com/eva1999/video/upload/v1601470633/mov_e15cd71e0a.mp4","caption":""}],"categories":[{"id":"2","name":"Development"},{"id":"7","name":"Arduino Uno"},{"id":"8","name":"Raspberry Pi"}],"createdBy":"Eva Denys","description":"Build your own Duke with this tutorial. Control with your phone, Alexa abilities, etc... Make making a quadruped robot fun!"}},"__N_SSG":true},"page":"/article/[id]","query":{"id":"2"},"buildId":"OeAMFq5b5qpRtGyxqV86H","nextExport":false,"isFallback":false,"gsp":true}</script><script nomodule="" src="/_next/static/chunks/polyfills-4f12100937d0f7b98295.js"></script><script src="/_next/static/chunks/main-ad096d235be7e3309947.js" async=""></script><script src="/_next/static/chunks/webpack-ccf5ab034a524403276a.js" async=""></script><script src="/_next/static/chunks/framework.5e03480598ad1120f007.js" async=""></script><script src="/_next/static/chunks/e22536ac.bbf891a3461cc9dcfc12.js" async=""></script><script src="/_next/static/chunks/commons.1442a74259c042993204.js" async=""></script><script src="/_next/static/chunks/pages/_app-6fe09ca7fd3f2b69689e.js" async=""></script><script src="/_next/static/chunks/75fc9c18.b78d99a337185d9a0ae9.js" async=""></script><script src="/_next/static/chunks/1275a3f23fb4885f6637e7492cf96f3e766b772d.ff2e0811c95450e7eff1.js" async=""></script><script src="/_next/static/chunks/5c6650fa2f810aa9d2e4ebd78cbb8aa8c3baebf3.50f4f7c49f9be081c814.js" async=""></script><script src="/_next/static/chunks/pages/article/%5Bid%5D-6548b120ba27f15ad9b2.js" async=""></script><script src="/_next/static/OeAMFq5b5qpRtGyxqV86H/_buildManifest.js" async=""></script><script src="/_next/static/OeAMFq5b5qpRtGyxqV86H/_ssgManifest.js" async=""></script></body></html>
