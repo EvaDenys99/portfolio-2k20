@@ -9,8 +9,8 @@ export default function Home() {
   const scrollDivRef = useRef(null);
 
   useEffect(() => {
-    const age = moment("19990421", "YYYYMMDD").fromNow();
-    const newAge = age.substring(0, age.lastIndexOf(" "));
+    const age = moment().diff("1999-04-21", "years", false);
+    const newAge = age.toString();
     setMyAge(newAge);
   }, []);
 
@@ -332,12 +332,13 @@ export default function Home() {
               >
                 <div className="mt-4">
                   <h2>> age & origin</h2>
-                  <p>{myAge} old </p>
+                  <p>{myAge} years old </p>
                   <p>Belgium, Deinze 9850</p>
                 </div>
                 <div className="mt-4">
                   <h2>> hobbies</h2>
                   <p>running</p>
+                  <p>fitness</p>
                   <p>drawing</p>
                   <p>coding</p>
                   <p>dogs&cats</p>
